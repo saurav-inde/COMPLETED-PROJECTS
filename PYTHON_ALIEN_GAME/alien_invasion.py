@@ -1,6 +1,7 @@
 import sys
 import pygame
 from pygame.constants import KEYDOWN, KEYUP
+from alien import Alien
 
 from bullet import Bullet
 from settings import Settings
@@ -23,6 +24,17 @@ class AlienInvasion:
 
         self.ship = Ship(self)#self parameter is used to provide access to class instance
         self.bullets = pygame.sprite.Group()
+
+        self.aliens = pygame.sprite.Group()
+        self._create_fleet()
+
+
+
+    def _create_fleet(self):
+        """create alien and add them to the group"""
+        new_alien = Alien(self)
+        self.aliens.add(new_alien) 
+
 
 
     def _fire_bullet(self):
@@ -95,7 +107,7 @@ class AlienInvasion:
         self.ship.blitme()   
         for bullet in self.bullets.sprites():#bullet to screen
             bullet.draw_bullet()
-
+        self.aliens.draw(self.screen)
 
         pygame.display.flip()
         """makes last drawn display visible to the user and aslo

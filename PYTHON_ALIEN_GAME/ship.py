@@ -8,7 +8,7 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         """Load the ship image and get its rectangle area layout"""
-        self.image = pygame.image.load("Resources\chapter_13\shooting_aliens\images\ship.bmp")
+        self.image = pygame.image.load("Resources\\chapter_13\\shooting_aliens\\images\\ship.bmp")
         self.rect = self.image.get_rect()
 
         """access to setings"""
