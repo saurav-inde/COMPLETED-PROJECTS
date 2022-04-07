@@ -1,5 +1,6 @@
 import sys
 import pygame
+from pygame import mixer
 from pygame.constants import KEYDOWN, KEYUP
 from alien import Alien
 
@@ -7,6 +8,16 @@ from bullet import Bullet
 from settings import Settings
 from ship import Ship
 
+
+
+# Starting the mixer
+mixer.init()
+
+# Loading the song
+mixer.music.load("sound.wav")
+
+# Setting the volume
+mixer.music.set_volume(0.7)
 
 
 class AlienInvasion:
@@ -33,6 +44,9 @@ class AlienInvasion:
     def _create_fleet(self):
         """create alien and add them to the group"""
         new_alien = Alien(self)
+       # alien_width = se
+
+
         self.aliens.add(new_alien) 
 
 
@@ -42,6 +56,7 @@ class AlienInvasion:
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
+            mixer.music.play()
 
 
     def _update_bullets(self):

@@ -1,0 +1,10 @@
+{
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.codeFolding": "Disabled",
+    "C_Cpp.configurationWarnings": "Disabled",
+    "C_Cpp.default.enableConfigurationSquiggles": false,
+    "C_Cpp.dimInactiveRegions": false,
+    "C_Cpp.enhancedColorization": "Disabled",
+    "python.defaultInterpreterPath": "C:\\Python\\Python3.10\\python.exe"
+}
